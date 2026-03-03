@@ -16,7 +16,7 @@
 ## 安装步骤
 1. 克隆仓库
 ```bash
-git clone https://github.com/你的用户名/file-extractor.git
+git clone https://github.com/TuDoing/file_extractor.git
 cd file-extractor
 ```
 2. 安装依赖
@@ -92,4 +92,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
 
