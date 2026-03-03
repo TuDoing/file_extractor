@@ -23,38 +23,73 @@ cd file-extractor
 ```bash
 pip install -r requirements.txt
 ```
-## 使用方法
-### 基础使用
 
+## 使用方法
+
+基础使用
 ```bash
-python doc_extractor.py --url "https://example.com/your-document.pdf" --api-key "你的API密钥"
+python file_extractor.py --url "https://example.com/your-document.pdf" --api-key "你的API密钥"
 ```
+
 指定输出文件名
 ```bash
-
-python doc_extractor.py -u "https://example.com/report.docx" -k "sk-xxx" -o "提取结果.txt"
+python file_extractor.py -u "https://example.com/report.docx" -k "sk-xxx" -o "提取结果.txt"
 ```
+
 自定义 PDF 转图片 DPI
 ```bash
-python doc_extractor.py -u "https://example.com/file.pdf" -k "sk-xxx" --dpi 300
+python file_extractor.py -u "https://example.com/file.pdf" -k "sk-xxx" --dpi 300
 ```
-完整参数说明
 
-参数	简写	说明	是否必填
---url	-u	文档的 URL 地址	✅ 是
---api-key	-k	DeepSeek OCR API 密钥	✅ 是
---output	-o	输出的 TXT 文件名	❌ 否（默认自动生成）
---dpi	-	PDF 转图片的 DPI 值	❌ 否（默认 200）
-输出说明
-提取的文本默认保存在 extracted_texts 目录下
-临时文件保存在 temp_files 目录，程序结束后自动清理
-输出文件编码为 UTF-8，兼容所有中文场景
-常见问题
-doc/wps 文件解析失败：确保安装了 Microsoft Word 或 WPS，且以管理员身份运行
-API 调用失败：检查 API Key 是否有效，网络是否能访问硅基流动 API
-PDF 识别乱码：提高 DPI 参数（如 --dpi 300）重试
-依赖安装失败：
-bash
-运行
-pip install --upgrade pip
-pip install -r requirements.txt --user
+
+
+### 完整参数说明
+| 参数 | 简写 | 说明 | 是否必填 |
+|------|------|------|----------|
+| --url | -u | 文档的URL地址 | ✅ 是 |
+| --api-key | -k | DeepSeek OCR API密钥 | ✅ 是 |
+| --output | -o | 输出的TXT文件名 | ❌ 否（默认自动生成） |
+| --dpi | - | PDF转图片的DPI值 | ❌ 否（默认200） |
+
+## 输出说明
+- 提取的文本默认保存在 `extracted_texts` 目录下
+- 临时文件保存在 `temp_files` 目录，程序结束后自动清理
+- 输出文件编码为UTF-8，兼容所有中文场景
+
+## 常见问题
+1. **doc/wps文件解析失败**：确保安装了Microsoft Word或WPS，且以管理员身份运行
+2. **API调用失败**：检查API Key是否有效，网络是否能访问硅基流动API
+3. **PDF识别乱码**：提高DPI参数（如--dpi 300）重试
+4. **依赖安装失败**：
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt --user
+   ```
+
+
+
+### 5. LICENSE（可选，MIT许可证）
+```
+MIT License
+
+Copyright (c) 2024 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
