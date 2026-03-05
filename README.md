@@ -24,23 +24,24 @@ cd file-extractor
 pip install -r requirements.txt
 ```
 
-## 使用方法
+## 命令行使用方法
 
 基础使用
 ```bash
-python file_extractor.py --url "https://example.com/your-document.pdf" --api-key "你的API密钥"
+python file_text_extractor_cli.py --url "https://example.com/your-document.pdf" --api-key "你的API密钥"
 ```
 
 指定输出文件名
 ```bash
-python file_extractor.py -u "https://example.com/report.docx" -k "sk-xxx" -o "提取结果.txt"
+python file_text_extractor_cli.py -u "https://example.com/report.docx" -k "sk-xxx" -o "提取结果.txt"
 ```
 
 自定义 PDF 转图片 DPI
 ```bash
-python file_extractor.py -u "https://example.com/file.pdf" -k "sk-xxx" --dpi 300
+python file_text_extractor_cli.py -u "https://example.com/file.pdf" -k "sk-xxx" --dpi 300
 ```
 
+## 直接调用方式参考test_use.py文件
 
 
 ### 完整参数说明
@@ -68,7 +69,17 @@ python file_extractor.py -u "https://example.com/file.pdf" -k "sk-xxx" --dpi 300
 
 
 
-### 5. LICENSE（可选，MIT许可证）
+## 项目结构
+```
+file_extractor/
+├── file_text_extractor.py     # 核心文本提取类
+├── file_text_extractor_cli.py # 文本提取命令行工具
+├── test_use.py                # 使用示例
+├── requirements.txt           # 依赖文件
+└── README.md                  # 项目说明
+```
+
+## 许可证
 ```
 MIT License
 
